@@ -2,6 +2,7 @@ const fs = require('fs');
 const url = require('url');
 const http = require('http');
 const config = require('./modules/config');
+const slugify = require('slugify');
 // Course
 const courseOfData = fs.readFileSync(`${__dirname}/data/course.json`, 'utf-8');
 const courseOfdataObj = JSON.parse(courseOfData);
