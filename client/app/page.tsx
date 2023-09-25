@@ -1,6 +1,8 @@
 import CourseGroup from './Components/Course/CourseGroup';
 import { asyncGetCourse } from './Helpers/Course';
 
+export const dynamic = 'force-dynamic';
+
 const Home = async () => {
   try {
     const courses = await asyncGetCourse();
