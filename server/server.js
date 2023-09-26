@@ -8,7 +8,9 @@ const courseOfData = fs.readFileSync(`${__dirname}/data/course.json`, 'utf-8');
 const courseOfdataObj = JSON.parse(courseOfData);
 
 // Server
-const server = http.createServer((req, res) => {
+
+const server = http.createServer();
+server.on('request', (req, res) => {
   const { query, pathname } = url.parse(req.url, true);
 
   // Config Access
